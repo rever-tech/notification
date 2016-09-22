@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>rever</groupId>
+    <groupId>ms</groupId>
     <artifactId>notification</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
@@ -13,7 +13,7 @@
         <encoding>UTF-8</encoding>
         <scala.version>2.11.8</scala.version>
         <finatra.version>2.2.0</finatra.version>
-        <mainClass>rever.notification.MainApp</mainClass>
+        <mainClass>ms.notification.MainApp</mainClass>
     </properties>
     <dependencies>
         <dependency>
