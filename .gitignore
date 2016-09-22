@@ -18,7 +18,6 @@ buildNumber.properties
 # Simple Build Tool
 # http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
 
-target/
 lib_managed/
 src_managed/
 project/boot/
@@ -183,3 +182,4 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 
+### Deploy ###
