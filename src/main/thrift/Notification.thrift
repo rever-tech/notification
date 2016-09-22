@@ -3,10 +3,7 @@ include "NotificationDT.thrift"
 
 service TNotificationService {
 
-    /** push new message to @recipients
-     * @return notificationId
-    **/
-    string notify(
+    string sendNotification(
         1: required NotificationDT.Notification notification
     )
 

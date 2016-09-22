@@ -1,3 +1,4 @@
+#@namespace scala com.rever.domain.thrift
 struct Notification {
     1: optional string notifyId
     2: required string sender
