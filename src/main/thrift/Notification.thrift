@@ -1,4 +1,4 @@
-#@namespace scala com.rever.service
+#@namespace scala ms.notification.service
 include "NotificationDT.thrift"
 
 service TNotificationService {
