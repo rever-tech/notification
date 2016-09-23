@@ -16,6 +16,13 @@
         <mainClass>ms.notification.MainApp</mainClass>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>com.github.etaty</groupId>
+            <artifactId>rediscala_2.11</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
