@@ -1,7 +1,7 @@
 package ms.notification.service
 
-import com.rever.domain.thrift.Notification
 import com.twitter.util.Future
+import ms.notification.domain.thrift.Notification
 
 /**
   * @author phuonglam 
