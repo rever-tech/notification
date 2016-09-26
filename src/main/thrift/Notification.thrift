@@ -3,6 +3,8 @@ include "NotificationDT.thrift"
 
 service TNotificationService {
 
+    string ping()
+
     list<string> sendNotification(
         1: required NotificationDT.Notification notification
     )
