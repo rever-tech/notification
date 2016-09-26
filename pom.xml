@@ -14,8 +14,22 @@
         <scala.version>2.11.8</scala.version>
         <finatra.version>2.2.0</finatra.version>
         <mainClass>ms.notification.MainApp</mainClass>
+        <elasticsearch.version>1.4.1</elasticsearch.version>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.etaty</groupId>
+            <artifactId>rediscala_2.11</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>

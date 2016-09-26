@@ -6,4 +6,5 @@ struct Notification {
     4: optional string notifyId
     5: optional string notifyType
     6: optional i64 createdTime
+    7: optional bool isRead
 }

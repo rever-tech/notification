@@ -24,27 +24,25 @@ class NotificationControllerTest extends FeatureTest {
   val notification = Notification(data = sendData,sender = sender,receiver = Seq(receiver1),notifyType=Some(notifyType))
 
   "[Thrift] test flow send notification 1 to 1" should {
+    var notifyId: Seq[String] = Seq()
     "send successful" in {
-      Assertions.assert(client.sendNotification(notification).isDone)
+      notifyId = client.sendNotification(notification).value
+      Assertions.assert(notifyId.nonEmpty)
     }
     "getNumUnread successful" in {
-      Assertions.assertResult(1)(client.getNumUnread(user = receiver1).value)
+      Assertions.assert(client.getNumUnread(user = receiver1).value > 0)
     }
     "getUnread successful" in {
-      Assertions.assertResult(1)(client.getUnread(receiver1).value.size)
+      Assertions.assert(client.getUnread(receiver1).value.nonEmpty)
     }
     "getNotification successful" in {
-      Assertions.assertResult(1)(client.getNotification(receiver1).value.size)
+      Assertions.assert(client.getNotification(receiver1).value.nonEmpty)
     }
     "markRead successful" in {
-      val notify = client.getUnread(receiver1).value.head
-      Assertions.assert(client.markRead(receiver1, notify.notifyId.get).isDone)
-      Assertions.assertResult(0)(client.getNumUnread(user = receiver1).value)
+      Assertions.assert(client.markRead(receiver1, notifyId.head).value)
     }
     "markUnread successful" in {
-      val notify = client.getNotification(receiver1).value.head
-      Assertions.assert(client.markUnread(receiver1, notify.notifyId.get).isDone)
-      Assertions.assertResult(1)(client.getNumUnread(user = receiver1).value)
+      Assertions.assert(client.markUnread(receiver1, notifyId.head).value)
     }
   }
 
