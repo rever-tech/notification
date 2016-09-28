@@ -21,7 +21,7 @@ case class NotificationServiceImpl @Inject()(notifyRepo: NotificationRepository)
         notifyType = notification.notifyType
       )
     }
-    notifyRepo.create(infos)
+    notifyRepo.createMulti(infos)
   }
 
   override def getNumUnread(
