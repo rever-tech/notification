@@ -120,7 +120,7 @@ case class NotificationRepositoryESImpl @Inject()(
   /**
    *  Foreach receiver, create a notification object
    */
-  override def create(infos: Seq[NotificationInfo]): Future[Seq[String]] = futurePool {
+  override def createMulti(infos: Seq[NotificationInfo]): Future[Seq[String]] = futurePool {
     for (info <- infos) yield {
       client
         .prepareIndex(index, typ)

@@ -7,7 +7,7 @@ import ms.notification.domain.NotificationInfo
  * Created by phuonglam on 9/22/16.
  **/
 trait NotificationRepository {
-  def create(infos: Seq[NotificationInfo]): Future[Seq[String]]
+  def createMulti(infos: Seq[NotificationInfo]): Future[Seq[String]]
 
   def delete(notifyId: String): Future[Boolean]
 
