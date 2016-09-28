@@ -17,7 +17,8 @@ case class NotificationServiceImpl @Inject()(notifyRepo: NotificationRepository)
       NotificationInfo(
         sender = notification.sender,
         receiver = receiver,
-        data = notification.data
+        data = notification.data,
+        notifyType = notification.notifyType
       )
     }
     notifyRepo.create(infos)
