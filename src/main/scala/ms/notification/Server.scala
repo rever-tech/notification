@@ -27,6 +27,7 @@ class Server extends HttpServer with ThriftServer {
 
   override protected def configureHttp(router: HttpRouter): Unit = {
     router.filter[CommonFilters]
+      .add[http.HealthController]
       .add[http.NotificationController]
   }
 
