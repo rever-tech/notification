@@ -17,7 +17,7 @@ object MainApp extends Server
 
 class Server extends HttpServer with ThriftServer {
 
-  override protected def defaultFinatraHttpPort: String = ":" + ZConfig.getString("server.http.port", "8001")
+  override protected def defaultFinatraHttpPort: String = ZConfig.getString("server.http.port", ":8001")
 
   override protected def defaultFinatraThriftPort: String = ZConfig.getString("server.thrift.port", ":9001")
 
