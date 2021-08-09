@@ -14,7 +14,7 @@
         <scala.version>2.11.8</scala.version>
         <finatra.version>2.2.0</finatra.version>
         <mainClass>ms.notification.MainApp</mainClass>
-        <elasticsearch.version>1.4.1</elasticsearch.version>
+        <elasticsearch.version>6.8.17</elasticsearch.version>
     </properties>
     <dependencies>
 
